@@ -1,0 +1,46 @@
+.mainTitle {
+  margin-top: 60px;
+}
+
+.mainActions {
+  align-items: flex-end;
+}
+
+.buscarCancionForm {
+  margin-top: 90px;
+}
+
+.buscador {
+  width: 256px;
+  height: 32px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.buscarBoton {
+  width: 128px;
+  height: 34px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.result {
+  display: flex;
+  background: grey;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.player {
+  display: block;  
+  height: 450px;
+  width: 450px;
+  margin: auto;
+  background: grey;
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+
+body {
+  text-align: center;
+}

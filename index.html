@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Music Player from SoundCloud" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Gerardo Rubio" />
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Enlace a la API -->
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+    <script src="script.js" async defer></script>
+    <title>Music Player</title>
+  </head>
+
+  <body>
+    <h1 class="mainTitle">Look for your favourite music!</h1>
+    
+    <div class="mainActions">
+        <form class="buscarCancionForm">
+            <!-- Barra de búqueda -->
+            <input class="buscador" type="search" placeholder="Set a track..." name="busqueda"/>
+      
+            <!-- Botón de búqueda -->
+            <button class="buscarBoton" id="submit">Search</button>
+          </form>
+    </div>
+    
+    </br>
+
+    <!-- Lugar donde se mostrarán las imágenes e ID's -->
+    <div class="results" draggable="true" ondragstart="drag(event)"></div>
+
+    <!-- Lugar donde se reproducirá la música -->
+    <img class="player" ondrop="drop(event)" ondragover="allowDrop(event)"></img>
+  </body>
+</html>
