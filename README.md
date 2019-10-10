@@ -1,1 +1,1 @@
-# Buscador Web de canciones con la API de Sound Cloud de Gerardo Rubio. 
+# Web search engine with the Sound Cloud API of Gerardo Rubio. 
