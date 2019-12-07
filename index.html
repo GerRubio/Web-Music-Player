@@ -6,10 +6,10 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Gerardo Rubio" />
 
-    <!-- Enlace al archivo CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <!-- Enlace a la API -->
+    <!-- API -->
     <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
     <script src="script.js" async defer></script>
     <title>Sound Cloud Music Player</title>
@@ -20,20 +20,20 @@
     
     <div class="mainActions">
         <form class="buscarCancionForm">
-            <!-- Barra de búqueda -->
+            <!-- Seek Bar -->
             <input class="buscador" type="search" placeholder="Set a track..." name="busqueda"/>
       
-            <!-- Botón de búqueda -->
+            <!-- Seek Button -->
             <button class="buscarBoton" id="submit">Search</button>
           </form>
     </div>
     
     </br>
 
-    <!-- lugar donde se mostrarán las imágenes e ID's -->
+    <!-- Draggable image -->
     <div class="results" draggable="true" ondragstart="drag(event)"></div>
 
-    <!-- lugar donde se reproducirá la música -->
+    <!-- Music player -->
     <img class="player" ondrop="drop(event)" ondragover="allowDrop(event)"></img>
   </body>
 </html>
