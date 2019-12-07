@@ -5,15 +5,15 @@ SC.initialize({
 document
   .querySelector(".buscarCancionForm")
   .addEventListener("submit", function(event) {
-    event.preventDefault(); // Para que no refresque la página.
+    event.preventDefault(); // Avoid page refresh
 
-    console.log(event.target.busqueda.value); // Mostramos por consola el valor del input con name="busqueda".
+    console.log(event.target.busqueda.value); // We show by console the value of the input with name = "search"
 
     SC.get("/tracks", {
       q: event.target.busqueda.value
     }).then(function(res) {
 
-      // Imágen e ID de la canción.
+      // Song image and ID
       for (let i = 0; i < res.length; i++) {
         const imagen = document.createElement("img");
         
@@ -29,13 +29,13 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
-// Permite agarrar una imágen.
+// Grab image
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.setData("srcSong", ev.target.src);
 }
 
-// Permite depositar una imágen.
+// Drag image
 function drop(ev) {
   ev.preventDefault();
 
@@ -44,7 +44,7 @@ function drop(ev) {
 
   ev.target.src = srcSong;
 
-  // Reproducir.
+  // Play
   SC.stream("/tracks/" + data).then(function(player) {
     player.play();
   });
